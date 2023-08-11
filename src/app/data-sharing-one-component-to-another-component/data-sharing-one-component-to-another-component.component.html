@@ -1,0 +1,10 @@
+<p>data-sharing-one-component-to-another-component works!</p>
+<h1>parent to child</h1>
+<h3>{{fetchData}}</h3>
+<hr>
+<hr>
+<h1>child to parent</h1>
+<input type="text" #box>
+<button (click)="sendData(box.value)">ChildToParent</button>
+
+

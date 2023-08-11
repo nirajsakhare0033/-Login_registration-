@@ -1,0 +1,47 @@
+<button
+  style="background-color: #afad4c; /* Green */ color: white"
+  (click)="btn(1)"
+>
+  Login
+</button>
+<button
+  style="background-color: #4caf50; /* Green */ color: white"
+  (click)="btn(2)"
+>
+  Registration
+</button>
+<button
+  style="background-color: #4c87af; /* Green */ color: white"
+  (click)="btn(3)"
+>
+  Forget Password
+</button>
+
+<button
+  style="background-color: #4c87af; /* Green */ color: white"
+  (click)="btn(4)"
+>
+  DataSharing
+</button>
+<div *ngIf="whatToShow == 1">
+  <app-loginuser></app-loginuser>
+</div>
+
+<div *ngIf="whatToShow == 2">
+  <app-register></app-register>
+</div>
+
+<div *ngIf="whatToShow == 3">
+  <app-password></app-password>
+</div>
+
+
+<!-- data Sharing One component to another component -->
+<div *ngIf="whatToShow == 4">
+  <app-data-sharing-one-component-to-another-component
+    [fetchData]="names"
+    (myEvent)="getDataFromChild($event)"
+  >
+  </app-data-sharing-one-component-to-another-component>
+</div>
+<!-- //data Sharing One component to another component -->
