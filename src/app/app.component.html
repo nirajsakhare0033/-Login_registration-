@@ -35,7 +35,6 @@
   <app-password></app-password>
 </div>
 
-
 <!-- data Sharing One component to another component -->
 <div *ngIf="whatToShow == 4">
   <app-data-sharing-one-component-to-another-component
@@ -45,9 +44,11 @@
   </app-data-sharing-one-component-to-another-component>
 </div>
 <!-- //data Sharing One component to another component -->
-
+<br>
+<br>
 <!-- service data sharing -->
-<input type="text">
-<button>Service</button>
+<div *ngIf="whatToShow!=1">
+  <input type="text" #box>
+  <button (click)="setData(box.value)">PassData</button>
+</div>
 <!-- service data sharing -->
-<h1>this is testing for deployment</h1>

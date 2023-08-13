@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyServiceService } from './service/my-service.service';
 
 @Component({
   selector: 'app-root',
@@ -23,4 +24,13 @@ export class AppComponent {
   getDataFromChild(eventvalue:string) {
     console.log(eventvalue)
   }
+  //setData
+  constructor(public service:MyServiceService){
+
+  }
+  setData(valueFromHtml:string){
+     this.service.setSerSet(valueFromHtml);
+     //console.log(valueFromHtml)
+  }
+
 }
